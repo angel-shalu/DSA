@@ -20,7 +20,7 @@ public class inputoutputArray {
         // System.out.println("maths :"+ marks[2]);
     
 
-        // For calculating we have to make a new variable
+        // For calculating percentage we have to make a new variable
         int percentage = (marks[0]+marks[1]+marks[2])/3;
         System.out.println("percentage :"+percentage + "%");
 
