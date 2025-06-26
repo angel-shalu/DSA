@@ -9,13 +9,13 @@ import java.util.*;
 public class function {
     public static void update(int marks[]){      // make new function update 
         for(int i=0; i<marks.length; i++ ){      // loop for adding 1 in marks 
-            marks[i] = marks[i]+1;              
+            marks[i] = marks[i]+1;               // here we updated the marks--- purane value me 1 add kr k 
         }
     }
 
     public static void main(String[] args) {
         int marks[] = { 87, 89, 98};
-        update(marks);
+        update(marks);         // update by the call by refrence
 
         // print our marks
         for(int i=0; i<marks.length; i++ ){
@@ -24,3 +24,31 @@ public class function {
         System.out.println();
     }
 }
+
+
+
+// import java.util.*;
+// public class function {
+//     public static void update(int marks[], int nonChangeable){      // make new function update 
+//         // Nonchangeable value get updated in array it is not updated here
+//         nonChangeable = 5;
+//         for(int i=0; i<marks.length; i++ ){      // loop for adding 1 in marks 
+//             marks[i] = marks[i]+1;               // here we updated the marks--- purane value me 1 add kr k 
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         int marks[] = { 87, 89, 98};         // create an array
+//         int nonChangeable = 7;              // passing one more variable 
+//         update(marks,nonChangeable) ;      // update by the call by refrence  
+//         System.out.println(nonChangeable) ;
+ 
+//         // print our marks
+//         for(int i=0; i<marks.length; i++ ){
+//             System.out.println(marks[i]+" ");  
+//         }
+//         System.out.println();
+//     }
+// }
+
+
