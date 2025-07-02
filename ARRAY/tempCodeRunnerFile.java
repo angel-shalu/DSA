@@ -1,0 +1,2 @@
+        printSubArray(numbers);
+    }
