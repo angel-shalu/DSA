@@ -1,4 +1,4 @@
-# Q.1 Two Sum Problem in Python
+# ---------------Q.1 Two Sum Problem in Python---------------
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(0,len(nums)):
@@ -6,6 +6,24 @@ class Solution:
                 sum = nums[i] + nums[j]
                 if sum == target:
                     return[i,j]
+
+
+# ----------------Q.9. Palindrome Number--------------------
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+
+        # negative numbers palindrome nahi hote
+        if x < 0 or (x % 10 == 0 and x != 0):
+            return False
+        input_num = x
+        new_num = 0
+        while (x > 0):
+            last_digit = x % 10
+            new_num = new_num * 10 + last_digit
+            x = x //10
+        return new_num == input_num
+
+# ----------------Q.13. Roman to Integer------------------------
                 
                 
                 
