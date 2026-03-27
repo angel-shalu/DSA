@@ -24,6 +24,31 @@ class Solution:
         return new_num == input_num
 
 # ----------------Q.13. Roman to Integer------------------------
+class Solution:
+    def romanToInt(self, s: str) -> int:
+
+        roman = {
+            'I': 1, 
+            'V': 5, 
+            'X': 10,
+            'L': 50, 
+            'C': 100,
+            'D': 500, 
+            'M': 1000
+        }
+
+        n = len(s)
+        result = 0
+        for i in range(0,n):
+    
+            # jaise I mean 1 or V means 5  lekin IV mean 4 to yah pe subtract hoga
+            # "MCMXCIV" = 1994..... M means 1000 or C mean 100 to minus...M = 1000, CM = 900, XC=90, IV=4 ---> TOTAL = 1994  (baki sab plus... "LVIII" L=50, VIII=8 ---> TOTAL= 58 )
+
+            if i < n-1 and roman[s[i]] < roman[s[i + 1]]:
+                result -= roman[s[i]]
+            else:
+                result += roman[s[i]]
+        return result
                 
                 
                 
