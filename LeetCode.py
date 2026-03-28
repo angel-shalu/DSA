@@ -95,7 +95,17 @@ class Solution:
                     
         # return pref
 
-    
+
+# ---------------------Q.509. Fibonacci Number --------------------------
+class Solution:
+    def fib(self, n: int) -> int:
+
+        def fun(num):              # ye nested function h isliye self use nahi kiye h
+            if num <= 1:           # recurssion ko stop krta h
+                return num
+            return fun(num-1) + fun(num-2)          # fibonacci formula --> F(n) = F(n-1) + F(n-2)
+
+        return fun(n)             # yah ape function ko call kie h 
         
                         
 
