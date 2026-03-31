@@ -106,10 +106,52 @@ class Solution:
             return fun(num-1) + fun(num-2)          # fibonacci formula --> F(n) = F(n-1) + F(n-2)
 
         return fun(n)             # yah ape function ko call kie h 
+
+
+
+# ------------------------Q. 66. Plus One ---------------------------------
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        n = len(digits)
         
+        # last se start karenge
+        for i in range(n-1, -1, -1):
+
+            if digits[i] < 9:
+                digits[i] += 1
+                return digits
+                
+            else:
+                digits[i] = 0   # carry aage jayega
+
+        # agar sab 9 the (jaise [9,9])
+        return [1] + digits
                         
 
-                        
+
+# --------------------------Q. 67. ADD Binary ------------------------------
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+
+        i = len(a) - 1            #last digit se start krenge
+        j = len(b) - 1
+        carry = 0
+        result = ""
+
+        while i >= 0 or j >= 0 or carry:
+            sum = carry
+            if i >= 0:
+                sum += int(a[i])
+                i -= 1
+                
+            if j >= 0:
+                sum += int(b[j])
+                j -= 1
+
+            result = str(sum % 2) + result       # current digit k liye
+            carry = sum // 2                     #  carry krne k liye
+        return result
+        
 
                         
 
