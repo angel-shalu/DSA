@@ -174,7 +174,24 @@ class Solution:
         return n == 1
         
 
-                        
+
+# ---------------Q.258. Add Digits ------------------------------------
+class Solution:
+    def addDigits(self, num: int) -> int:
+
+        while num >= 10:   # jab tak 2 digit hai
+            total = 0
+
+            while num > 0:
+                total += num % 10
+                num //= 10
+
+            num = total
+
+        return num
+
+
+# -------------Q. Ugly Number-----------------------------------
 
                         
 
