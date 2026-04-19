@@ -248,6 +248,29 @@ class Solution:
                 right = mid - 1
 
         return False
+
+
+
+# ------------------------Q. 404.Convert a number to hexadecimal-------------
+class Solution:
+    def toHex(self, num: int) -> str:
+
+        if num == 0:
+            return "0"
+
+        hex_chars = "0123456789abcdef"
+        result = ""
+
+        # handle negative using 32-bit
+        if num < 0:
+            num += 2**32
+
+        while num > 0:
+            remainder = num % 16
+            result = hex_chars[remainder] + result
+            num //= 16
+
+        return result
     
 
 
